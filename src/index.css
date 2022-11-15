@@ -1,0 +1,27 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+:root {
+  --white: rgb(250, 249, 249);
+  --yellow: rgb(255, 217, 25);
+  --grey: rgb(109, 94, 94);
+  
+  /* --white: #FAF9F9;
+     --yellow: #FFD919;
+     --grey: #6D5E5E;
+  */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
