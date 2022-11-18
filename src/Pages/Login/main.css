@@ -1,4 +1,4 @@
-.container {
+.container-login {
   height: 100vh;
   position: relative;
   width: 100vw;
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-.left_login_background{
+.left-login-background{
   width: 60%;
 
   transition: transform 1.1s ease-in-out;
@@ -262,39 +262,39 @@ form.sign-in-form {
 
 /* ANIMATION */
 
-.container.sign-up-mode:before {
+.container-login.sign-up-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
 }
 
-.container.sign-up-mode .left-panel .image,
-.container.sign-up-mode .left-panel .content {
+.container-login.sign-up-mode .left-panel .image,
+.container-login.sign-up-mode .left-panel .content {
   transform: translateX(-800px);
 }
 
-.container.sign-up-mode .signin {
+.container-login.sign-up-mode .signin {
   left: 25%;
 }
 
-.container.sign-up-mode form.sign-up-form {
+.container-login.sign-up-mode form.sign-up-form {
   opacity: 1;
   z-index: 2;
 }
 
-.container.sign-up-mode form.sign-in-form {
+.container-login.sign-up-mode form.sign-in-form {
   opacity: 0;
   z-index: 1;
 }
 
-.container.sign-up-mode .right-panel .image,
-.container.sign-up-mode .right-panel .content {
+.container-login.sign-up-mode .right-panel .image,
+.container-login.sign-up-mode .right-panel .content {
   transform: translateX(0%);
 }
 
-.container.sign-up-mode .left-panel {
+.container-login.sign-up-mode .left-panel {
   pointer-events: none;
 }
 
-.container.sign-up-mode .right-panel {
+.container-login.sign-up-mode .right-panel {
   pointer-events: all;
 }
