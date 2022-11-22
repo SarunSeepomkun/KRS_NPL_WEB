@@ -1,25 +1,24 @@
-import React,{useState} from "react";
-import {
-  BrowserRouter as Router,
-  Routes as Switch,
-  Route,
-} from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { Login, Todolist } from "./Pages";
-import NavBar from "./Components/NavBar";
+import RequireAuth from "./GlobalRedux/Features/auth/RequireAuth"
+import TopDownLayout from './Layout/TopDownLayout';
 
 function App() {
-  const [isLogin,setIsLogin] = useState(false);
 
   return (
-      <Router>
-       {/* {isLogin === true ? <NavBar /> : ""}  */}
-       <NavBar /> 
-        <Switch>
-          <Route path="/" exact element={<Login />} />
-          <Route path="/Login" element={<Login />} />
+    <Routes>
+      <Route path="/" element={<TopDownLayout />}>
+        {/* public routes */}
+        <Route index element={<Login />} />
+        <Route path="login" element={<Login />} />
+
+        {/* protected routes */}
+        <Route element={<RequireAuth />}>
           <Route path="/Todolist" element={<Todolist />} />
-        </Switch>
-      </Router>
+        </Route>
+      </Route>
+    </Routes>
   );
 }
 
